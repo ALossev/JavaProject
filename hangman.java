@@ -8,7 +8,8 @@ import java.util.Scanner;
 import java.util.Random;
 
 public class hangman {
-    private static final String[] WORDS = {"hangman", "computer", "programming", "language", "openai", "intelligence", "algorithm", "developer", "challenge", "community"};
+    // Added random words in the list which user would inport into.
+    private static final String[] WORDS = {"hangman", "computer", "programming", "language", "funny", "comedy","intelligence", "algorithm", "developer", "challenge", "community"};
 
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
@@ -20,7 +21,7 @@ public class hangman {
 
         System.out.println("Welcome to Hangman!");
         System.out.println("Guess the word:");
-
+// Loop that follow if correct  or incorrect.
         while (wrongGuessCount < maxAttempts) {
             if (isWordGuessed(wordToGuess, guessedLetters.toString())) {
                 System.out.println("Congratulations! You guessed the word: " + wordToGuess);
